@@ -1,20 +1,6 @@
 <template>
   <div class="home">
     <div id="wrapper" class="fade-in">
-      <div id="intro">
-        <img src="@/assets/images/logot.png" width="100" />
-        <h1>Fruitsoft</h1>
-        <p>El socio de tu negocio</p>
-        <ul class="actions">
-          <li>
-            <a href="#cabecera" class="button icon solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
-        </ul>
-      </div>
-      <header id="header"></header>
-
       <div id="main">
         <article class="post featured">
           <header class="major" id="cabecera">
@@ -150,23 +136,14 @@
           </section>
         </section>
       </footer>
-      <div id="copyright">
-        <ul>
-          <li>&copy; Fruitsoft 2019</li>
-        </ul>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "home",
-  components: {
-    HelloWorld
-  }
+  name: "home"
 };
 </script>
+
+<style scoped></style>

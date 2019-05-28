@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <navBar />
-    <router-view />
+    <intro />
+    <div id="container">
+      <navBar id="nav" />
+      <router-view id="view" />
+    </div>
+    <copyright />
   </div>
 </template>
 
 <script>
+import intro from "@/components/intro";
+import copyright from "@/components/copyright";
 import navBar from "@/components/nav";
 
 export default {
   components: {
-    navBar
+    navBar,
+    intro,
+    copyright
   },
   beforeCreate() {
     alert(
@@ -28,5 +36,22 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #212931;
+}
+</style>
+
+<style scoped>
+#container {
+}
+
+#nav {
+}
+
+#view {
 }
 </style>

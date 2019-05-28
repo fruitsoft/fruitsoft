@@ -1,43 +1,58 @@
 <template>
   <nav id="nav">
-    <ul class="links">
-      <li class="active">
-        <a href="index.html">Inicio</a>
-      </li>
-      <li>
-        <a href="Productos.html">Productos</a>
-      </li>
-      <li>
-        <a onclick="alert('Contenido no disponible')">Documentos</a>
-      </li>
-      <li>
-        <a href="licencias.html">licecias</a>
-      </li>
-      <li>
-        <a href="contacto.html">Contacto</a>
-      </li>
-    </ul>
-    <ul class="icons">
-      <li>
-        <a href="#" class="icon fa-twitter">
-          <span class="label">Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://bit.ly/2Wzg7a2" class="icon fa-facebook">
-          <span class="label">Facebook</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="icon fa-instagram">
-          <span class="label">Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="icon fa-github">
-          <span class="label">GitHub</span>
-        </a>
-      </li>
-    </ul>
+    <div class="routes">
+      <router-link to="/" exact>Inicio</router-link>
+      <router-link to="/productos">Productos</router-link>
+      <router-link to="/documentos" @click="alert('Contenido no disponible')"
+        >Documentos</router-link
+      >
+      <router-link to="/licencias">licecias</router-link>
+      <router-link to="/contacto">Contacto</router-link>
+    </div>
+    <div class="social">
+      <font-awesome-icon icon="twitter" />
+      <font-awesome-icon icon="facebook" />
+      <font-awesome-icon icon="instagram" />
+      <font-awesome-icon icon="github" />
+    </div>
   </nav>
 </template>
+
+<script>
+export default {
+  name: "navBar"
+};
+</script>
+
+<style scoped>
+#nav {
+  display: flex;
+  height: 58px;
+  line-height: 58px;
+  background-color: rgba(255, 255, 255, 0.176);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.routes {
+}
+
+.social {
+}
+
+a {
+  display: inline-block;
+  vertical-align: middle;
+  height: 58px;
+  padding: 0 30px;
+  text-decoration: none;
+}
+
+.router-link-active {
+  background-color: #fff;
+  color: #1e252d !important;
+}
+</style>
